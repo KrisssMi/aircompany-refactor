@@ -28,13 +28,12 @@ public class Runner {
         Airport airport = new Airport(planes);
         Airport militaryAirport = new Airport(airport.getMilitaryPlanes());
         Airport passengerAirport = new Airport(airport.getPassengerPlanes());
-        System.out.println("Military airport sorted by max distance: " + militaryAirport
+        System.out.printf("Military airport sorted by max distance: %s%n", militaryAirport
                 .sortByMaxDistance()
                 .toString());
-        System.out.println("Passenger airport sorted by max speed: " + passengerAirport
+        System.out.printf("Passenger airport sorted by max speed: %s%n", passengerAirport
                 .sortByMaxSpeed()
                 .toString());
-
-        System.out.println("Plane with max passenger capacity: " + passengerAirport.getPassengerPlaneWithMaxPassengersCapacity());
+        System.out.printf("Plane with max passenger capacity: %s%n", passengerAirport.getPassengerPlaneWithMaxPassengersCapacity());
     }
 }
